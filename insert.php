@@ -12,6 +12,25 @@ $sql="INSERT INTO entries(Name,Phone,E_mail)
  ('BUDDY','8888777766','cdf@gmail.com'),
  ('CANDY','9999557746','cfg@gmail.com'),
  ('CHRISTY','7888939889','jks@gmail.com')";
+$sql="DELETE 
+FROM 
+    TABLE
+WHERE
+    ID IN (
+        SELECT
+            ID
+        FROM 
+            TABLE
+        WHERE 
+            EMAILADDRESS IN (
+                SELECT 
+                    EMAILADDRESS
+                FROM
+                    TABLE
+                GROUP BY EMAILADDRESS
+                HAVING COUNT(1) > 1
+            )
+    ) " ;
 if($mysqli->query($sql)===true)
 {
 	echo "records added successfully";
