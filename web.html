@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		<h1>To modify the data in database</h1> 
+	</title>
+	<style type="text/css">
+		.button2
+{
+width:250px;
+height:40px; 
+left:750px; 
+top:625px; 
+background:green; 
+font-family:verdana; 
+font-size:18px; 
+color:white; 
+border-radius:5px 5px 5px 5px; 
+border-width: 1px; 
+border-style:solid; 
+border-color: gray; 
+cursor:pointer; 
+outline:none;
+}
+.body3
+{
+position: absolute;
+left: 300px;
+right: 200px;
+top: 90px;
+width: 75%;
+height:900px;
+}
+
+#form3
+{	position: absolute;
+
+	top: 150px;
+	left:400px;
+	font-family: Arial;
+	font-size: 20px;
+	color: #142170;
+	width: 300px;
+	height:500px;
+}
+
+	</style>
+</head>
+<body>
+	<form>
+<div  id="form3" class="body3">
+	<h3> modify data</h3>
+	 <button id="myBtn">select</button>
+  <script>
+    var btn = document.getElementById('myBtn');
+    btn.addEventListener('click', function() {
+      document.location.href = '<?php header("Location: /select.php"); ?>';
+    });
+  </script>
+  <button id="myBtn">insert</button>
+  <script>
+    var btn = document.getElementById('myBtn');
+    btn.addEventListener('click', function() {
+      document.location.href = '<?php header("Location: /insert.php"); ?>';
+    });
+  </script>
+  <button id="myBtn">delete</button>
+  <script>
+    var btn = document.getElementById('myBtn');
+    btn.addEventListener('click', function() {
+      document.location.href = '<?php header("Location: /delete.php") ;?>';
+    });
+  </script>
+</form>
+</body>
+</html>
